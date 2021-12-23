@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Llama a la accion
         id: accion
-        uses: sebitaToString/reemplazar-tokens@v8
+        uses: sebitaToString/reemplazar-tokens@v7
          
       # Use the output from the `hello` step
       - name: Get the output time
