@@ -12,7 +12,7 @@ jobs:
       #  run: echo "The time was ${{ steps.accion.outputs.time }}"
       - uses: cschleiden/replace-tokens@v1
         with:
-          files: '["**/*.yml"]'
+          files: '["src/*.yml"]'
         env:
           nameapp: sebaapplicacion
           CALLBACK: some_value
