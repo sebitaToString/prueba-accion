@@ -15,14 +15,12 @@ jobs:
       - uses: Firenza/secrets-to-env@v1.1.0
         with:
             secrets: ${{ toJSON(secrets) }}
-            env: ${{ toJSON(secrets) }}
       - uses: cschleiden/replace-tokens@v1
         with:
           files: '["**/*.yml"]'
         env:
-          nameapp: sebaapplicacion
-          CALLBACK: some_value
-          ns: test
+          nameapp: sebaapplicacion 
+          ns: nombreNameSpace
       - uses: actions/upload-artifact@v2
         with:
           name: my-artifact
