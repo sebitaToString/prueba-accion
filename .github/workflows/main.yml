@@ -13,9 +13,9 @@ jobs:
       
       - name: Checkout
         uses: actions/checkout@v2.4.0
-      #- uses: Firenza/secrets-to-env@v1.1.0
-      #  with:
-      #      secrets: ${{ toJSON(secrets) }}
+      - uses: Firenza/secrets-to-env@v1.1.0
+        with:
+            secrets: ${{ toJSON(secrets) }}
       - uses: cschleiden/replace-tokens@v1
         with:
           files: '["**/*.yml"]'
