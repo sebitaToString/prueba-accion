@@ -16,3 +16,4 @@ jobs:
         env:
           nameapp: sebaapplicacion
           CALLBACK: some_value
+          ns: test
