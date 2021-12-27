@@ -18,7 +18,7 @@ spec:
       - name: #{nameapp}#
         image: #{urlregistry}#:__buildid__
         env: 
-        - name: servidor_db
+        - name: #{TEST}#
           value: #{servidor_db}#
         - name: usuario_db
           value: #{usuario_db}#
