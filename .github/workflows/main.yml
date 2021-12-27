@@ -10,6 +10,7 @@ jobs:
       #  uses: sebitaToString/reemplazar-tokens@v7          
       #- name: Get the output time
       #  run: echo "The time was ${{ steps.accion.outputs.time }}"
+      
       - name: Checkout
         uses: actions/checkout@v2.4.0
       - uses: Firenza/secrets-to-env@v1.1.0
