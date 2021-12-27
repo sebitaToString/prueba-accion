@@ -16,13 +16,13 @@ jobs:
       - uses: Firenza/secrets-to-env@v1.1.0
         with:
             secrets: ${{ toJSON(secrets) }}
-      - uses: bikotoru/replace-tokens@v1
+      - uses: bikotoru/replace-tokens@v3.1
         with:
           files: '["**/*.yml"]'
         env:
           nameapp: sebaapplicacion 
           ns: nombreNameSpace
-      - uses: actions/upload-artifact@v3.1
+      - uses: actions/upload-artifact@v2
         with:
           name: my-artifact
           path: src/*.yml
