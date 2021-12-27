@@ -16,7 +16,7 @@ jobs:
       - uses: Firenza/secrets-to-env@v1.1.0
         with:
             secrets: ${{ toJSON(secrets) }}
-      - uses: bikotoru/replace-tokens@v3.5
+      - uses: bikotoru/replace-tokens@v2.0
         with:
           files: '["**/*.yml"]'
         env:
