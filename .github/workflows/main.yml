@@ -10,9 +10,11 @@ jobs:
       #  uses: sebitaToString/reemplazar-tokens@v7          
       #- name: Get the output time
       #  run: echo "The time was ${{ steps.accion.outputs.time }}"
+      - name: Checkout
+        uses: actions/checkout@v2.4.0
       - uses: cschleiden/replace-tokens@v1
         with:
-          files: '["/src/*.yml"]'
+          files: '["**/*.yml"]'
         env:
           nameapp: sebaapplicacion
           CALLBACK: some_value
