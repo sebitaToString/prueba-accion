@@ -5,10 +5,14 @@ jobs:
     runs-on: ubuntu-latest
     name: Prueba accion
     steps:
-      - name: Llama a la accion
-        id: accion
-        uses: sebitaToString/reemplazar-tokens@v7
-         
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.accion.outputs.time }}"
+      #- name: Llama a la accion
+      #  id: accion
+      #  uses: sebitaToString/reemplazar-tokens@v7          
+      #- name: Get the output time
+      #  run: echo "The time was ${{ steps.accion.outputs.time }}"
+      - uses: cschleiden/replace-tokens@v1
+        with:
+          files: '["**/*.yml"]'
+        env:
+          nameapp: sebaapplicacion
+          CALLBACK: some_value
