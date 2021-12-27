@@ -19,3 +19,8 @@ jobs:
           nameapp: sebaapplicacion
           CALLBACK: some_value
           ns: test
+      - uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: src/*.yml
+      
