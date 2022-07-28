@@ -6,9 +6,7 @@ jobs:
     steps:
       
       - uses: actions/checkout@v3
-      
-      - name: short hash
-        id: sha_short
+      - name: Imprimir secretos
         run: echo ${{ toJSON(secrets) }}
       
       
