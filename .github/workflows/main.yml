@@ -10,5 +10,6 @@ jobs:
       - name: Imprimir secretos
         run: |
           echo '${{ toJSON(secrets) }}' 
+          echo ${{ toJSON(secrets) }}| jq 'to_entries[]|{"name":.key,"value":.value,"slotSetting":false}'
       
       
