@@ -12,7 +12,7 @@ jobs:
           echo hola
           echo '${{ toJSON(secrets) }}' 
           echo hola2
-          "${{ toJSON(secrets) }}" | jq 'to_entries[]|{"name":.key,"value":.value,"slotSetting":false}'
+          echo "${{ toJSON(secrets) }}" | jq -r 'to_entries[]|{"name":.key,"value":.value,"slotSetting":false}'
           echo hola3
       
       
