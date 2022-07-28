@@ -1,29 +1,16 @@
-on: [push]
+on: workflow_dispatch
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
     name: Prueba accion
     steps:
-      #- name: Llama a la accion
-      #  id: accion
-      #  uses: sebitaToString/reemplazar-tokens@v7          
-      #- name: Get the output time
-      #  run: echo "The time was ${{ steps.accion.outputs.time }}"
       
-      - name: Checkout
-        uses: actions/checkout@v2.4.0
-      - uses: Firenza/secrets-to-env@v1.1.0
-        with:
-            secrets: ${{ toJSON(secrets) }}
-      - uses: bikotoru/replace-tokens@v2.0.3
-        with:
-          files: '["**/*.yml"]'
-        env:
-          nameapp: sebaapplicacion 
-          ns: nombreNameSpace
-      - uses: actions/upload-artifact@v2
-        with:
-          name: my-artifact
-          path: src/*.yml
+      - uses: actions/checkout@v3
+      - name: Install Dependencies
+        run: |
+              sudo yum install -y jq  
+      - name: short hash
+        id: sha_short
+        run: echo ${{ toJSON(secrets) }}
       
       
