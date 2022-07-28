@@ -9,7 +9,10 @@ jobs:
       - uses: actions/checkout@v3
       - name: Imprimir secretos
         run: |
+          echo hola
           echo '${{ toJSON(secrets) }}' 
-          echo ${{ toJSON(secrets) }}| jq 'to_entries[]|{"name":.key,"value":.value,"slotSetting":false}'
+          echo hola2
+          echo ${{ toJSON(secrets) }} | jq 'to_entries[]|{"name":.key,"value":.value,"slotSetting":false}'
+          echo hola3
       
       
