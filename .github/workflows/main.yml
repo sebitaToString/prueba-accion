@@ -6,9 +6,7 @@ jobs:
     steps:
       
       - uses: actions/checkout@v3
-      - name: Install Dependencies
-        run: |
-              sudo yum install -y jq  
+      
       - name: short hash
         id: sha_short
         run: echo ${{ toJSON(secrets) }}
