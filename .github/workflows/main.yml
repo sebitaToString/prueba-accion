@@ -12,7 +12,7 @@ jobs:
           echo hola
           echo '${{ toJSON(secrets) }}' 
           echo hola2
-          echo "${{ toJSON(secrets) }}" | jq -r '.'
+          echo ${{ toJSON(secrets) }} | jq -r '.'
           echo hola3
       
       
